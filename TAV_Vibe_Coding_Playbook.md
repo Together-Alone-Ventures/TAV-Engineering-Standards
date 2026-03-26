@@ -57,6 +57,7 @@ tool rhythm. A repeatable review ladder. Evidence-first release gating.
 - **Rule:** Never update docs until code, tests, and pinned dependencies are stable.
 - **Rule:** When any two documents conflict, the restart pack (§3) wins over older plan docs.
   When restart pack and code conflict, repo ground truth (CLI output) wins.
+- **Rule:** Before concluding that an upstream API, schema, or interface has changed, verify the installed version and inspect the effective state directly from repo metadata or build tool output. Do not update docs or downstream code based on assumed or recalled upstream state.
 - **Rule:** Never use integration behaviour to infer protocol truth.
 
 ---
@@ -342,6 +343,8 @@ Every time a field is added to a type exposed via a component interface:
 2. Update any manually-maintained binding files in the same commit.
 3. Run the build and verify the interface extraction diff is clean.
 
+No downstream testing, integration validation, or acceptance sign-off may proceed until the interface definition file and any manually maintained bindings are updated, reviewed, and the extraction/check diff is clean.
+
 ### 8.2 Manually-Maintained Binding Files
 
 - Never run auto-generation tools on manually-maintained binding files.
@@ -408,6 +411,7 @@ Two guards required for every field that crosses a component boundary:
 - Claude reads RESTART_PACK.md from GitHub and confirms current state. If unavailable, operator
   pastes the file manually.
 - Confirm connector access: fetch one file from the repo directly.
+- When using AI tooling for implementation or review work, confirm before beginning that the tool is operating in the correct repository context and that any repo-local instructions or operating constraints governing the tool session have been loaded and confirmed. Do not begin from an ambiguous or unverified tool context.
 - State the goal for this session in one sentence before any implementation begins.
 - If the session involves a design decision: confirm it has been reviewed against the TAV Design
   Principles before touching code.

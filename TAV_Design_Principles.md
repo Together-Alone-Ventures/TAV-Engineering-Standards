@@ -371,6 +371,8 @@ before implementation begins. For TAV, this is not a legal formality — it is t
 - "We'll handle privacy compliance at the end"
 - "GDPR is a legal concern, not an engineering concern"
 - "The data is pseudonymous so it's fine"
+- Pseudonymous or system-generated identifiers may still constitute personal data in context if the controller can reasonably re-link them to a natural person. Do not describe such identifiers as non-PII or anonymous without a context-specific analysis.
+- Reduced identifiability, de-attribution, or pseudonymisation must not be described as anonymisation by default. Where residual data remains attributable by means reasonably likely to be used, treat it as still within the personal-data boundary.
 - "We'll figure out the deletion boundary later"
 - "The receipt proves deletion — we don't need to design the deletion surface explicitly"
 
