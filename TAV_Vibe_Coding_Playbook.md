@@ -64,6 +64,8 @@ tool rhythm. A repeatable review ladder. Evidence-first release gating.
 
 ## 2.5 Design Principles — The Summary
 
+The eight Playbook principles are an implementation-facing operating subset, not a replacement for the full eleven Design Principles; Simplicity, Security, and Privacy remain mandatory design gates via the Design Principles.
+
 Before any implementation begins, the system design must be reviewed against TAV's eleven design
 principles. These principles are documented in full in TAV_Design_Principles.md.
 
