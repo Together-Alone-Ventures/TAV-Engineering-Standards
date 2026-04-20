@@ -1,5 +1,12 @@
 # TAV Engineering Standards — Changelog
 
+## 2026-04-20 — v1.1 — MKTd03 Residual Trust Note added
+
+- Added `MKTd03_Residual_Trust_Note.md` as a project-scoped, non-normative companion note for operator-facing rhetorical and comparative framing about MKTd03.
+- Keeps rhetorical/comparative framing separate from MKTd03 normative protocol artefacts.
+- Companion to the MKTd03 RST Evaluation Lens v1 in the MKTd03 repo; the two documents are intended to remain consistent, but neither is doctrine and neither is authoritative for the other.
+- This addition is non-doctrine. `TAV_Vibe_Coding_Playbook.md` and `TAV_Design_Principles.md` remain unchanged.
+
 ## 2026-03-20 — v1.0 — Initial markdown conversion
 
 - Migrated TAV Vibe Coding Playbook v4 from docx to markdown (TAV_Vibe_Coding_Playbook.md)
